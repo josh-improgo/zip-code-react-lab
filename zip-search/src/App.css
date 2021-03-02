@@ -1,6 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html, body {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
 .App-header {
   background-color: #222;
   padding: 20px;
   color: white;
   text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 10rem auto 10rem;
+  grid-template-rows: 5rem minmax(auto, 10rem);
+  margin-top: 50px;
+}
+
+.error-message {
+  background-color: red;
+  color: white;
+  grid-column: 1 / -1;
+}
+
+.zip-form {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+#zip-search {
+  flex: 3 1 100px;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+
+.zip-form > button {
+  /* justify-self: flex-end; */
+  flex: 1 1 100px;
+  border: 1px solid #222;
+  border-radius: 20px;
+}
+.zip-form > label {
+  /* justify-self: flex-start; */
+  flex: 1 1 100px;
+}
+
+.cities {
+  grid-column: 2;
+}
+
+.city {
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.city h4 {
+  background-color: #ddd;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.city ul {
+}
+
+@media screen and (max-width: 600px) {
+  .zip-form {
+    flex-direction: column;
+    align-items: stretch
+  }
 }
